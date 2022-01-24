@@ -1,28 +1,40 @@
 import java.math.*;
 public class PointCharge {
 
-   private BigDecimal charge = new BigDecimal("1");
-   private BigDecimal xCoord = new BigDecimal("0");
-   private BigDecimal yCoord = new BigDecimal("0");
-   private BigDecimal zCoord = new BigDecimal("0");
+   private int charge = 1;
+   private int xCoord = 0;
+   private int yCoord = 0;
+   private int zCoord = 0;
    
-   public PointCharge(BigDecimal charge, BigDecimal xCoord, BigDecimal yCoord, BigDecimal zCoord) {
-      this.charge = new BigDecimal(charge.toString());
-      this.xCoord = new BigDecimal(xCoord.toString());
-      this.yCoord = new BigDecimal(yCoord.toString());
-      this.zCoord = new BigDecimal(zCoord.toString());
+   public PointCharge(int charge, int xCoord, int yCoord, int zCoord) {
+      this.charge = charge;
+      this.xCoord = xCoord;
+      this.yCoord = yCoord;
+      this.zCoord = zCoord;
    }
 
-   public BigDecimal getCharge() {
+   public int getCharge() {
       return this.charge;
    }
-   public BigDecimal getXCoord() {
+   public int getXCoord() {
       return this.xCoord;
    }
-   public BigDecimal getYCoord() {
+   public int getYCoord() {
       return this.yCoord;
    }
-   public BigDecimal getZCoord() {
+   public int getZCoord() {
       return this.yCoord;
+   }
+   public BigDecimal getDistance() {
+      BigDecimal answer = new BigDecimal(Double.toString(Math.sqrt(Math.pow(xCoord,2) + Math.pow(yCoord,2) + Math.pow(zCoord,2))));
+      
+      return answer;
+   }
+   public String toString() {
+      String output = "Charge: " + this.charge;
+      output += "\nXCoord: " + this.xCoord;
+      output += "\nYCoord: " + this.yCoord;
+      output += "\nZCoord: " + this.zCoord;
+      return output;
    }
 }

@@ -14,7 +14,7 @@ public class PointCharge {
    }
 
    public int getCharge() {
-      return this.charge;
+      return charge;
    }
    public int getXCoord() {
       return this.xCoord;

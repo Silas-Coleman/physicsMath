@@ -1,18 +1,18 @@
 import java.math.*;
 public class PointCharge {
-
+   //Private Variables
    private int charge = 1;
    private int xCoord = 0;
    private int yCoord = 0;
    private int zCoord = 0;
-   
+   //Constructor
    public PointCharge(int charge, int xCoord, int yCoord, int zCoord) {
       this.charge = charge;
       this.xCoord = xCoord;
       this.yCoord = yCoord;
       this.zCoord = zCoord;
    }
-
+   //Accessor Methods
    public int getCharge() {
       return charge;
    }
@@ -37,4 +37,5 @@ public class PointCharge {
       output += "\nZCoord: " + this.zCoord;
       return output;
    }
+   //No Mutator Methods because this class will never be changed by another Class
 }
